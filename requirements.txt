@@ -1,0 +1,8 @@
+# comfyui-minimax-h3-timeline-director — deps BEYOND the
+# engine base env. aiohttp ships with ComfyUI itself. The H3 Omni
+# prompt rewriter is a SEPARATE ComfyUI extension resolved at
+# runtime from custom_nodes, not a pip package.
+av
+imageio-ffmpeg
+playwright
+psutil
