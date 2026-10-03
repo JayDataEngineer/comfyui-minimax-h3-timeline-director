@@ -4,5 +4,9 @@
 # runtime from custom_nodes, not a pip package.
 av
 imageio-ffmpeg
-playwright
 psutil
+
+# playwright deliberately NOT declared: only the pack's tests/browser_*
+# files import it, and Manager pip-installs requirements.txt on every
+# install — that would drag a whole browser stack onto every machine
+# for a test-only dependency (audit finding, 2026-10-13).
