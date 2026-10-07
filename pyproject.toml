@@ -2,16 +2,23 @@
 name = "comfyui-minimax-h3-timeline-director"
 version = "0.8.0"
 description = "Editable reference media timeline for ComfyUI MiniMax H3 Reference to Video"
-readme = "README.md"
+# Version display + package identity for ComfyUI-Manager (it reads
+# this for its version column). Dependencies live in BOTH files by
+# one law: requirements.txt is what Manager pip-installs on the
+# git-url door, [project].dependencies is what the Comfy registry
+# action installs at publish — the estate's pack-parity wall pins
+# the two doors read the same set (registry door, 2026-10-18).
 license = {file = "LICENSE"}
-requires-python = ">=3.10"
-dependencies = []
-keywords = ["comfyui", "minimax-h3", "reference-to-video", "timeline", "video"]
+dependencies = [
+    "av",
+    "imageio-ffmpeg",
+    "psutil"
+]
 
-[project.optional-dependencies]
-dev = []
+[project.urls]
+Repository = "https://github.com/JayDataEngineer/comfyui-minimax-h3-timeline-director"
 
 [tool.comfy]
-PublisherId = "local"
+PublisherId = "data-engineer"
 DisplayName = "MiniMax H3 Timeline Director"
 Icon = ""
